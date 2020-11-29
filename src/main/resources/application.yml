@@ -1,0 +1,24 @@
+server:
+  port: 5551
+
+spring:
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/pubsub
+    username: postgres
+    password: root
+    initialization-mode: always
+
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        format_sql: false
+        jdbc:
+          timezone: UTC
