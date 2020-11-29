@@ -1,14 +1,12 @@
 package com.ms.model;
 
 import lombok.Data;
-
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.MappedSuperclass;
 import java.sql.Timestamp;
 
 @Data
-@Entity
+@MappedSuperclass
 public class Message {
 
     @Id
