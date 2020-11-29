@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class MessageController {
 
-    private MessageService messageService;
+    private final MessageService messageService;
 
     @PostMapping("/")
     public ResponseEntity<Message> takeMessage(@RequestBody Message message) {
