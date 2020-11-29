@@ -3,6 +3,7 @@ package com.ms.model;
 import lombok.Data;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
 import java.sql.Timestamp;
 
 @Data
@@ -14,6 +15,7 @@ public class Message {
 
     protected int msisdn;
 
+    @Transient
     protected Action action;
 
     protected Timestamp timestamp;

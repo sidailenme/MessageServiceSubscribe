@@ -17,7 +17,7 @@ public class MessageController {
 
     @PostMapping("/")
     public ResponseEntity<Message> takeMessage(@RequestBody Message message) {
-        System.out.println(message);
+        System.out.println("New message: " + message);
         messageService.save(message);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
